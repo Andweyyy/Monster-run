@@ -10,7 +10,7 @@ public class MainScene : SEScene
 		SESprite bg;
 		public static int x;
 		public static int y;
-		AudioClipManager bgm = OBB;
+		AudioClipManager bgm;
 		AudioClip music;
 		public void initialize(SEResourceCache rsc)
 		{
@@ -18,8 +18,8 @@ public class MainScene : SEScene
 			x = 0;
 			y = 0;
 			
-		AudioClipManager.prepare("music");
-		AudioClipManager.play("OBB");
+		AudioClipManager.prepare("OBB.mp3");
+		AudioClipManager.play("OBB.mp3");
 
 		rsc.prepare_image("bg","maxresdefault",get_scene_width(),get_scene_height());
 		bg = add_sprite_for_image(SEImage.for_resource("bg"));
